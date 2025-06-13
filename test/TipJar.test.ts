@@ -1,4 +1,3 @@
-import { TipJar } from './../typechain-types/TipJar';
 import { loadFixture } from "@nomicfoundation/hardhat-toolbox/network-helpers";
 import { expect } from "chai";
 import hre, { ethers } from "hardhat";
@@ -57,8 +56,8 @@ describe("TipJar", function () {
       const value = ethers.parseEther("1");
       const initBalance = await tipJar.connect(user1).getBalance();
       await user1.sendTransaction({ to: tipJar.target, value });
-      const ebdBalance = await tipJar.connect(user1).getBalance();
-      expect(ebdBalance).to.equal(initBalance + ebdBalance)
+      const endBalance = await tipJar.connect(user1).getBalance();
+      expect(endBalance).to.equal(initBalance + value)
     });
   });
 

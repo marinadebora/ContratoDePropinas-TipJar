@@ -61,9 +61,9 @@ const tipHistory = async () => {
 };
 
 const main = async () => {
-  await tip("Hola Mundo");
-  //await getBalance();
-  // await withdraw();
+  //await tip("Hola Mundo");
+    await getBalance();
+  //await withdraw();
   //await tipHistory();
 
 };
